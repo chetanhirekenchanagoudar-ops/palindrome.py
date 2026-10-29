@@ -9,14 +9,16 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Checking Python program...'
-                bat 'py -m py_compile palindrome.py'
+
+                bat '"C:/Users/HP/AppData/Local/Programs/Python/Python314/python.exe" -m py_compile palindrome.py'
             }
         }
 
         stage('Run') {
             steps {
                 echo 'Running Python program...'
-                bat 'echo madam | py palindrome.py'
+
+                bat 'echo madam | "C:/Users/HP/AppData/Local/Programs/Python/Python314/python.exe" palindrome.py'
             }
         }
     }
